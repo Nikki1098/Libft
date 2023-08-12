@@ -6,7 +6,7 @@
 /*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:45:43 by nikki             #+#    #+#             */
-/*   Updated: 2023/08/12 16:41:11 by nikki            ###   ########.fr       */
+/*   Updated: 2023/08/12 20:14:09 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,16 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t n);
 int     ft_atoi(const char *str);
 void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *s);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *strtrim(char const *s1, char const *set);
+char    **ft_split(char const *s, int c);
+char    *ft_itoa(int n);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 #endif

@@ -22,6 +22,17 @@ SRC_NAME		=		ft_isalpha.c \
 						ft_atoi.c \
 						ft_calloc.c \
 						ft_strdup.c \
+						ft_substr.c \
+						ft_strjoin.c \
+						ft_strtrim.c \
+						ft_strjoin.c \
+						ft_itoa.c \
+						ft_strmapi.c \
+						ft_striteri.c \
+						ft_putchar_fd.c \
+						ft_putstr_fd.c \
+						ft_putendl_fd.c \
+						ft_putnbr_fd.c \
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
 SRC_NAME		=		$(addprefix $(SRC_PATH), $(SRC_NAME))
@@ -32,4 +43,3 @@ NAME			=		libft.a
 all:	$(NAME)
 
 $(NAME):
-	
