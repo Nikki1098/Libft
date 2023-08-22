@@ -1,22 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 20:20:57 by nikki             #+#    #+#             */
-/*   Updated: 2023/08/15 06:28:04 by nikki            ###   ########.fr       */
+/*   Created: 2023/08/14 11:22:56 by nikki             #+#    #+#             */
+/*   Updated: 2023/08/15 06:19:38 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+static int  get_word_count(char *s, char delimiter)
 {
+    int count;
+
+    count = 1;
+    if (ft_strlen(s) == 0)
+        return (0);
     while (*s != '\0')
     {
-        write (fd, s, 1);
+        if (*s == delimiter)
+        {
+            count++;
+            while (*s == delimiter)
+                s++;
+        }
         s++;
     }
+    return (count);
+}
+
+
+
+char    **ft_split(char const *s, char c)
+{
+    int     word_count;
+    char    *trimmed_str;
+    char    **result;
 }

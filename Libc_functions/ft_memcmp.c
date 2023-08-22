@@ -6,7 +6,7 @@
 /*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 13:00:44 by nikki             #+#    #+#             */
-/*   Updated: 2023/08/12 13:18:47 by nikki            ###   ########.fr       */
+/*   Updated: 2023/08/15 06:24:42 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    int i;
-    unsigned char *buffer1;
-    unsigned char *buffer2;
+    size_t          i;
+    unsigned char   *buffer1;
+    unsigned char   *buffer2;
 
     i = 0;
     buffer1 = (unsigned char *)s1;

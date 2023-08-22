@@ -35,11 +35,24 @@ SRC_NAME		=		ft_isalpha.c \
 						ft_putnbr_fd.c \
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
-SRC_NAME		=		$(addprefix $(SRC_PATH), $(SRC_NAME))
+SRC				=		$(addprefix $(SRC_PATH), $(SRC_NAME))
+
 HEADER			=		./includes/
+CC				=		cc
 CFLAGS			=		-Wall -Wextra -Werror
 NAME			=		libft.a
 
 all:	$(NAME)
 
 $(NAME):
+		$(CC) -c $(CFLAGS) $(SRC) -I$(HEADER)
+		ar rc $(NAME) $(OBJ_NAME)
+		ranlib $(NAME)
+
+clean:
+		rm -rf $(OBJ_NAME)
+
+fclean: clean
+		rm -f $(NAME)
+
+re: fclean all
