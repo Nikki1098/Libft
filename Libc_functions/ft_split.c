@@ -6,7 +6,7 @@
 /*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 12:47:00 by nikki             #+#    #+#             */
-/*   Updated: 2023/08/30 12:47:16 by nikki            ###   ########.fr       */
+/*   Updated: 2023/08/30 14:25:34 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char    **ft_split(char const *s, char c)
     char        **result;
     int         i;
 
-    result = (char **)malloc((countwords(s, c) + 1) * sizeof(char *));
+    result = (char **)malloc((countword(s, c) + 1) * sizeof(char *));
     if (result == NULL)
         return (NULL);
     if (!s || !result)
@@ -52,7 +52,7 @@ char    **ft_split(char const *s, char c)
             if (!ft_strchr(s, c))
                 word_len = ft_strlen(s);
             else
-                word_len = ft_strchr(s, c);
+                word_len = ft_strchr(s, c) - s;
             result[i++] = ft_substr(s, 0, word_len);
             s += word_len;
         }

@@ -6,7 +6,7 @@
 /*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:45:43 by nikki             #+#    #+#             */
-/*   Updated: 2023/08/15 06:19:18 by nikki            ###   ########.fr       */
+/*   Updated: 2023/08/30 14:31:00 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
-char    *strtrim(char const *s1, char const *set);
-char    **ft_split(char const *s, int c);
+char    *ft_strtrim(char const *s1, char const *set);
+char    **ft_split(char const *s, char c);
 char    *ft_itoa(int n);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -50,5 +50,10 @@ void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
+typedef struct      s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 
 #endif
