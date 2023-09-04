@@ -34,9 +34,14 @@ SRC_NAME		=		ft_atoi.c \
 						ft_tolower.c \
 						ft_toupper.c \
 
+SRC_NAME_BONUS	=		ft_lstnew.c \
+
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
 SRC				=		$(addprefix $(SRC_PATH), $(SRC_NAME))
+
+OBJ_NAME_BONUS	=		$(SRC_NAME_BONUS:.c=.o)
+SRC_BONUS		=		$(addprefix $(SRC_PATH), $(SRC_NAME_BONUS))
 
 HEADER			=		./includes/
 CC				=		cc
@@ -57,3 +62,7 @@ fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(SRC_BONUS)
+		@ar r $(NAME) $(SRC_BONUS)
+		@echo "Bonus done!"
