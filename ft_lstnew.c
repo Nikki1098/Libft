@@ -6,7 +6,7 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:20:53 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/05 09:19:26 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/05 11:39:30 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	ft_lstnew(void *content)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
-	return (new); 
+	return (*new); 
 }
 
 int main(void)
