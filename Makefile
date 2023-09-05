@@ -1,4 +1,3 @@
-SRC_PATH		= 		./Libc_functions/
 SRC_NAME		=		ft_atoi.c \
 						ft_bzero.c \
 						ft_calloc.c \
@@ -43,7 +42,7 @@ SRC				=		$(addprefix $(SRC_PATH), $(SRC_NAME))
 OBJ_NAME_BONUS	=		$(SRC_NAME_BONUS:.c=.o)
 SRC_BONUS		=		$(addprefix $(SRC_PATH), $(SRC_NAME_BONUS))
 
-HEADER			=		./includes/
+HEADER			=		.
 CC				=		cc
 CFLAGS			=		-Wall -Wextra -Werror
 NAME			=		libft.a
