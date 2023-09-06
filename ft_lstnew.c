@@ -5,44 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 13:20:53 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/05 11:39:30 by nstooss          ###   ########.fr       */
+/*   Created: 2023/09/05 12:20:45 by nstooss           #+#    #+#             */
+/*   Updated: 2023/09/05 12:55:58 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include "unistd.h"
 
-t_list	ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
 	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
+	if (new != NULL)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
-	return (*new); 
-}
-
-int main(void)
-{
-	t_list *my_list = NULL;
-	int data = 42;
-	t_list *new_element = ft_lstnew(&data);
-	
-	if (new_element == NULL)
-	{
-		printf("Fehler beim Erstellen des Elements.\n");
-		exit(1);
-	}
-	my_list = new_element;
-	t_list *current = my_list;
-	while (current != NULL)
-	{
-		int *content = (int *)(current->content);
-		printf("Inhalt: %d\n", *content);
-		current = current->next;
-	}
-	return 0;
+	return (new);
 }
