@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 13:30:29 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/06 13:19:53 by nstooss          ###   ########.fr       */
+/*   Created: 2023/09/06 10:37:44 by nstooss           #+#    #+#             */
+/*   Updated: 2023/09/06 10:44:59 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	while (*s)
+	size_t	size;
+
+	size = 0;
+	while (lst)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		lst = lst->next;
+		size++;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
-	else
-		return (NULL);
+	return (size);
 }

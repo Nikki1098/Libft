@@ -6,30 +6,40 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:43:56 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/05 11:36:29 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/06 14:42:32 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*pointer;
-	int		len;
+	char	*ptr;
 
-	len = ft_strlen(s);
-	pointer = (char *)s + len - 1;
-	if (c == '\0')
+	ptr = NULL;
+	if (!ft_isascii(c))
+		return (NULL);
+	while (*s != '\0')
 	{
-		pointer++;
-		return (pointer);
+		if (*s == (unsigned char)c)
+			ptr = (char *)s;
+		s++;
 	}
-	while (len != 0)
-	{
-		if (*pointer == c)
-			return (pointer);
-		len--;
-		pointer--;
-	}
-	return (NULL);
+	if (*s == (unsigned char)c)
+		return ((char *)s);
+	else
+		return ((char *)ptr);
 }
+
+//int main(int argc, char **argv)
+//{
+//	int nb;
+//	if (argc < 2)
+//		return (0);
+//	nb = ft_atoi(argv[2]);
+//	printf ("<%s>", ft_strrchr(argv[1], nb));
+//	return (0);
+//}
+//
+//
