@@ -6,7 +6,7 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:45:43 by nikki             #+#    #+#             */
-/*   Updated: 2023/09/07 11:48:59 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/07 13:29:46 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-#include <stdint.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
