@@ -6,7 +6,7 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:43:56 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/07 10:52:08 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/07 13:51:56 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (c == 0)
 		return (NULL);
 	if (!*s)
-		return (NULL);
+		return (malloc(0));
 	while (s[i] != '\0')
 		i++;
 	if (i < 1)
