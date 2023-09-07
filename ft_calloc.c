@@ -6,7 +6,7 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:15:32 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/07 13:02:58 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/07 13:18:57 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	total = nmemb * size;
 	if (nmemb > SIZE_MAX / size)
-		return (NULL);
-	if (nmemb < 0 || size < 0)
 		return (NULL);
 	pointer = malloc(total);
 	if (pointer == NULL)
