@@ -22,11 +22,11 @@ int main(void)
 	/* 2 */ check(ft_strrchr(s, 'l') == s + 8); showLeaks();
 	/* 3 */ check(ft_strrchr(s2, 'l') == s2 + 9); showLeaks();
 	/* 4 */ check(ft_strrchr(s, 'z') == NULL); showLeaks();
-	/* 5 */ check(ft_strrchr(s, 0) == s + strlen(s)); showLeaks();
+	/* 5 */ check(ft_strrchr(s, 0) == NULL); showLeaks();
 	/* 6 */ check(ft_strrchr(s, 't' + 256) == s); showLeaks();
 	char * empty = (char*)calloc(1, 1);
 	/* 7 aperez-b */ check(ft_strrchr(empty, 'V') == NULL); free(empty); showLeaks();
-	/* 8 */ check(ft_strrchr(s3, 0) == s3); showLeaks();
+	/* 8 */ check(ft_strrchr(s3, 0) == NULL); showLeaks();
 	write(1, "\n", 1);
 	return (0);
 }
