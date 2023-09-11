@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -19,12 +20,10 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	ptr = (char *)s;
-	if (!ft_isascii(c))
-		return ((char *)s);
 	if (c == 0)
-		return (malloc(0));
+		return ((char *)s + ft_strlen(s));
 	if (!*s)
-		return (malloc(0));
+		return (NULL);
 	while (s[i] != '\0')
 		i++;
 	if (i < 1)
@@ -37,14 +36,14 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-//int main(int argc, char **argv)
+//
+//int main(void)
 //{
+//	char *src = ""
 //	int nb;
-//	if (argc < 2)
-//		return (0);
-//	nb = ft_atoi(argv[2]);
-//	printf ("<%s>", ft_strrchr(argv[1], nb));
-//	printf ("Expected <%s>", strrchr(argv[1], nb));
+//	nb = 1;
+//	printf ("<%lc>\n", ft_strrchr(src, L'\xe2\x80\x93'));
+//	printf ("<%lc>\n", strrchr(src, L'\xe2\x80\x93'));
 //	return (0);
 //}
+//
