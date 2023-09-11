@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 12:20:45 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/11 09:25:24 by nstooss          ###   ########.fr       */
+/*   Created: 2023/09/11 09:49:46 by nstooss           #+#    #+#             */
+/*   Updated: 2023/09/11 10:43:16 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
+	t_list	*temp;
 
-	new = malloc(sizeof(t_list));
+	if (!lst || !f || !del)
+		return (NULL);
+	new = ft_lstnew(f(lst->content));
 	if (!new)
 		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	temp = new;
+	lst = lst->next;
+	while (lst)
+	{
+		new->next = ft_lstnew(f(lst->content));
+		if (!new->next)
+		{
+			ft_lstclear(&temp, del);
+			return (NULL);
+		}
+		new = new->next;
+		lst = lst->next;
+	}
+	new = NULL;
+	return (temp);
 }
-//
-//int main(void)
-//{
-//	t_list *new;
-//	int data = 42;
-//
-//	new = ft_lstnew(&data);
-//	printf("%d\n", *(int *)(new->content));
-//	return 0;
-//}
-//

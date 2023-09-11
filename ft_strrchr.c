@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:43:56 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/07 13:51:56 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/07 14:44:30 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (!ft_isascii(c))
 		return ((char *)s);
 	if (c == 0)
-		return (NULL);
+		return (malloc(0));
 	if (!*s)
 		return (malloc(0));
 	while (s[i] != '\0')

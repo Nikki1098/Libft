@@ -34,6 +34,7 @@ SRC_NAME		=		ft_atoi.c \
 						ft_toupper.c \
 
 SRC_NAME_BONUS	=		ft_lstnew.c \
+						ft_lstadd_front.c \
 
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
