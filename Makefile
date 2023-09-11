@@ -1,3 +1,4 @@
+NAME			=		libft.a
 SRC_NAME		=		ft_atoi.c \
 						ft_bzero.c \
 						ft_calloc.c \
@@ -51,7 +52,6 @@ SRC_BONUS		=		$(SRC_NAME_BONUS)
 
 CC				=		cc
 CFLAGS			=		-Wall -Wextra -Werror
-NAME			=		libft.a
 
 all:	$(NAME)
 
@@ -70,5 +70,3 @@ bonus: $(OBJ_NAME_BONUS)
 		@ar crs $(NAME) $(OBJ_NAME_BONUS)
 		@echo "Bonus done!"
 
-$(OBJ_NAME_BONUS): $(SRC_NAME_BONUS)
-	$(CC) $(CFLAGS) -c $^ -o $@
