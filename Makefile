@@ -39,10 +39,9 @@ SRC_NAME_BONUS	=		ft_lstadd_back.c \
 						ft_lstdelone.c \
 						ft_lstiter.c \
 						ft_lstlast.c \
-						ft_lastmap.c \
+						ft_lstmap.c \
 						ft_lstnew.c \
-						ft_lstsize.c \						
-
+						ft_lstsize.c
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
 SRC				=		$(SRC_NAME)
@@ -60,13 +59,16 @@ $(NAME): $(OBJ_NAME)
 		ar -crs $(NAME) $(OBJ_NAME)
 
 clean:
-		rm -rf $(OBJ_NAME)
+		rm -rf $(OBJ_NAME) $(OBJ_NAME_BONUS)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
 
-bonus: $(SRC_BONUS)
-		@ar r $(NAME) $(SRC_BONUS)
+bonus: $(OBJ_NAME_BONUS)
+		@ar crs $(NAME) $(OBJ_NAME_BONUS)
 		@echo "Bonus done!"
+
+$(OBJ_NAME_BONUS): $(SRC_NAME_BONUS)
+	$(CC) $(CFLAGS) -c $^ -o $@

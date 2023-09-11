@@ -6,7 +6,7 @@
 /*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 09:30:20 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/11 09:33:57 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/11 11:22:32 by nstooss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	temp;
+	t_list	*temp;
 
-	if (!lst || new)
+	if (!lst || !new)
 		return ;
 	if (!(*lst))
 	{
