@@ -33,8 +33,15 @@ SRC_NAME		=		ft_atoi.c \
 						ft_tolower.c \
 						ft_toupper.c \
 
-SRC_NAME_BONUS	=		ft_lstnew.c \
+SRC_NAME_BONUS	=		ft_lstadd_back.c \
 						ft_lstadd_front.c \
+						ft_lstclear.c \
+						ft_lstdelone.c \
+						ft_lstiter.c \
+						ft_lstlast.c \
+						ft_lastmap.c \
+						ft_lstnew.c \
+						ft_lstsize.c \						
 
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
