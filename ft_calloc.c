@@ -18,12 +18,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*pointer;
 
 	total = nmemb * size;
-	if (nmemb > SIZE_MAX / size)
+	if (nmemb != 0 && size != 0 && total / nmemb != size)
 		return (NULL);
 	pointer = malloc(total);
 	if (pointer == NULL)
 		return (NULL);
-	ft_memset((unsigned char *)pointer, 0, total);
+	ft_memset((unsigned char *)pointer, '\0', total);
 	return (pointer);
 }
 
