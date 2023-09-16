@@ -18,3 +18,14 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+
+//#include <stdio.h>
+//#include <ctype.h>
+//
+//int main(void)
+//{
+//	char c = 'Z';
+//
+//	printf("expected return <%d>\nmy return <%d>\n", isalpha(c), ft_isalpha(c));
+//	return (0);
+//}

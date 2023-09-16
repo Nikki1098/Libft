@@ -34,3 +34,13 @@ int	ft_atoi(const char *str)
 	}
 	return (num * neg);
 }
+//
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	const char *str1 = "        \n 483274";
+//
+//	printf("expected <%d>\nmy output <%d>\n", atoi(str1), ft_atoi(str1));
+//	return (0);
+//}

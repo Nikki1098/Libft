@@ -26,3 +26,17 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+// 
+// #include <stdio.h>
+// 
+// int main(void)
+// {
+// char str[] = "Hallo mein name ist Niklas";
+// char str2[] = "Hallo mein name ist Niklas";
+// 
+// printf("before memset the memory includes <%s>\n", str);
+// ft_memset(str, 's', 6);
+// memset(str2, 's', 6);
+// printf("Expectet output <%s>\nMy output <%s>\n", str2, str);
+// return (0);
+// }
