@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 09:30:20 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/11 11:22:32 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/16 20:43:09 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,26 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		temp = temp->next;
 	temp->next = new;
 }
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	t_list *list = NULL;
+//	
+//	t_list *element1 = ft_lstnew("First");
+//	t_list *element2 = ft_lstnew("second");
+//
+//	ft_lstadd_back(&list, element1);
+//	ft_lstadd_back(&list, element2);
+//	
+//	t_list *current = list;
+//	while (current != NULL)
+//	{
+//		printf("%s\n", (char *)current->content);
+//		current = current->next;
+//	}
+//	free(element1);
+//	free(element2);
+//	return 0;
+//}

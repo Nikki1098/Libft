@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nstooss <nstooss@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nikki <nikki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 09:05:29 by nstooss           #+#    #+#             */
-/*   Updated: 2023/09/11 09:25:31 by nstooss          ###   ########.fr       */
+/*   Updated: 2023/09/17 09:16:39 by nikki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+#include <stdio.h>
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
