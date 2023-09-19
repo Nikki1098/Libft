@@ -48,3 +48,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	create_sub(s, sub, start, len);
 	return (sub);
 }
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	char *str = "hello my name is Niklas";
+//	char *sub; 
+//
+//	sub = ft_substr(str, 6, 7);
+//	printf("%s\n", sub);
+//	return (0);
+//}
+//

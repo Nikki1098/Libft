@@ -55,13 +55,13 @@ char	*ft_itoa(int n) //converts an int to a string
 	}
 	return (str);
 }
-
-#include <stdio.h>
-
-int main(void)
-{
-	int nb = -1928347;
-
-	printf("My output <%s>\n",ft_itoa(nb));
-	return (0);
-}
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int nb = -1928347;
+//
+//	printf("My output <%s>\n",ft_itoa(nb));
+//	return (0);
+//}

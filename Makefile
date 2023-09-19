@@ -45,7 +45,6 @@ SRC_NAME_BONUS	=		ft_lstadd_back.c \
 						ft_lstsize.c
 
 OBJ_NAME		=		$(SRC_NAME:.c=.o)
-SRC				=		$(SRC_NAME)
 
 OBJ_NAME_BONUS	=		$(SRC_NAME_BONUS:.c=.o)
 SRC_BONUS		=		$(SRC_NAME_BONUS)

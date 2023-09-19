@@ -29,3 +29,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	char string1[50] = "Hallo mein Name ist Jenny";
+//	char string2[50] = "Hallo mein Name ist Niklas";
+//	int result = ft_memcmp(string1, string2, 20);
+//
+//	printf("%d\n", result);
+//	return (0);
+//}
+//

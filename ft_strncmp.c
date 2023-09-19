@@ -27,3 +27,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	char 	*str1 = "Hello my name is Niklas";
+//	char 	*str2 = "Hello my name is Charlie";
+//	int		result;
+//
+//	result = ft_strncmp(str1, str2, 21);
+//	printf("%d\n", result);
+//	return (0);
+//}

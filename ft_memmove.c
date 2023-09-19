@@ -21,6 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	tmp = (char *)src;
 	if (tmp < dest)
 	{
+		//if source is before dest they overlaps and I need to copy backwards
 		while (n--)
 			dest[n] = tmp[n];
 	}

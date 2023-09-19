@@ -30,3 +30,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+//
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	char string[50] = "hallo mein name ist niklas und ich will y suchen";
+//	char c = 'y';
+//	char *result;
+//
+//	result = ft_memchr(string, c, 50);
+//	printf("%s\n", result);
+//	return (0);
+//}
